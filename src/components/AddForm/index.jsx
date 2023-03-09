@@ -16,7 +16,7 @@ export const AddForm = () => {
                   <label htmlFor="category" className="form-label">
                     Категория
                   </label>
-                  <select class="form-select" id="category">
+                  <select className="form-select" id="category">
                     <option value="" selected="selected" disabled="disabled">
                       Выбрать категорию
                     </option>
@@ -75,9 +75,9 @@ export const AddForm = () => {
                 </div>
               </div>
               <div className="col-sm-12 mb-3">
-                <div class="input-group mb-3">
+                <div className="input-group mb-3">
                   <input type="file" class="form-control" id="image" />
-                  <label class="input-group-text" for="image">
+                  <label className="input-group-text" for="image">
                     Загрузить картинку
                   </label>
                 </div>
