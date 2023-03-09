@@ -14,12 +14,22 @@ const options = [
 
 export const Restoraunts = () => {
   const [count, setCount] = useState(options[0].value);
-  const { data: restoraunts, isSuccess } = useGetRestorauntsQuery(count);
+  const {
+    data: restoraunts,
+    isSuccess,
+    isLoading,
+  } = useGetRestorauntsQuery(count);
 
   return (
     <div className="row g-5">
       <div className="col-sm-9">
         <h2 className="display-6 mb-5">Список ресторанов</h2>
+
+        {isLoading && (
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        )}
 
         <div className="row mb-4">
           <label htmlFor="category" className="form-label col-form-label col-2">
